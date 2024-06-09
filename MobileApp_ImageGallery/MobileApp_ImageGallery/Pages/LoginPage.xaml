@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:MobileApp_ImageGallery"
+            x:Class="MobileApp_ImageGallery.Pages.LoginPage"
+            NavigationPage.HasNavigationBar="False">
+
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" x:Name="stackLayout">
+        <Entry  Text="{Binding EnteredPin, Mode=TwoWay}" 
+                IsPassword="True" 
+                Keyboard="Numeric" 
+                MaxLength="4" />
+        <Button Text="Подтвердить" 
+                Command="{Binding SubmitPin}" />
+        <Label  Text="{Binding StatusMessage}" 
+                TextColor="Red" />
+    </StackLayout>
+</ContentPage>
